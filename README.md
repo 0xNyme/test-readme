@@ -88,20 +88,4 @@ fn main() {
     print_item(p);
 }
 ```
-/**
- * Processes the selected code segment.
- *
- * This function operates on the currently selected code, performing
- * actions such as analysis, transformation, or extraction based on
- * the application's requirements. It is designed to handle various
- * types of code selections, ensuring compatibility and robustness.
- *
- * Additional details:
- * - Validates the selection before processing.
- * - Can be extended to support multiple programming languages.
- * - Handles edge cases such as empty or malformed selections.
- *
- * @param selection The code segment currently selected by the user.
- * @returns The result of processing the selection, which may include
- *          transformed code, analysis data, or error information.
- */
+

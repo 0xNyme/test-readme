@@ -24,26 +24,67 @@ Rust was first released in 2010 and has quickly gained popularity among develope
 - **Macros:** Rust’s macro system allows for powerful code generation and metaprogramming.
 - **Community Support:** Rust has an active and welcoming community, with extensive resources for learning and troubleshooting.
 - **Open Source:** Rust is open source and developed collaboratively.
+## More Examples
 
-## Example
-
-```rust
-fn main() {
-    println!("Hello, Rust!");
-}
-```
-
-## Another Example
+### Example: Using Pattern Matching
 
 ```rust
-fn add(a: i32, b: i32) -> i32 {
-    a + b
+fn describe_number(n: i32) {
+    match n {
+        0 => println!("Zero"),
+        1..=9 => println!("Single digit"),
+        10..=99 => println!("Double digits"),
+        _ => println!("Large number"),
+    }
 }
 
 fn main() {
-    let sum = add(5, 7);
-    println!("The sum is: {}", sum);
+    describe_number(42);
 }
 ```
 
-Rust is ideal for building reliable and efficient software.
+### Example: Error Handling with `Result`
+
+```rust
+use std::fs::File;
+
+fn open_file(path: &str) -> Result<File, std::io::Error> {
+    let file = File::open(path)?;
+    Ok(file)
+}
+
+fn main() {
+    match open_file("test.txt") {
+        Ok(_) => println!("File opened successfully."),
+        Err(e) => println!("Failed to open file: {}", e),
+    }
+}
+```
+
+### Example: Using Traits and Generics
+
+```rust
+trait Printable {
+    fn print(&self);
+}
+
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl Printable for Point {
+    fn print(&self) {
+        println!("Point({}, {})", self.x, self.y);
+    }
+}
+
+fn print_item<T: Printable>(item: T) {
+    item.print();
+}
+
+fn main() {
+    let p = Point { x: 3, y: 4 };
+    print_item(p);
+}
+```

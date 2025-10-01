@@ -88,3 +88,7 @@ fn main() {
     print_item(p);
 }
 ```
+
+## Fun Fact
+
+Rust was voted the "most loved programming language" in the Stack Overflow Developer Survey for multiple consecutive years, highlighting its popularity and developer satisfaction.

@@ -49,5 +49,6 @@ fn main() {
 Rust is ideal for building reliable and efficient software.
 
 ## Learn More
-
 For more information, visit the [official Rust website](https://www.rust-lang.org/).
+
+**Fact:** Rust has been voted the "most loved programming language" in the Stack Overflow Developer Survey for multiple consecutive years.
